@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { Toolbar } from "../components/Toolbar";
+import { Navbar } from "../components/navbar";
 import styles from "../styles/Eom.module.css";
 
 export const EOM = ({employee}) => {
     return (
         <div className="w-full">
-            <Toolbar/>
+            <Navbar/>
             <div className={styles.container}>
                     <div className="bg-white p-4 rounded-md text-center">
                         <h1 className="font-bold text-3xl font-sans">Employee of the month</h1>

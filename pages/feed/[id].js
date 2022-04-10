@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Toolbar } from "../../components/Toolbar";
+import { Navbar } from "../../components/navbar";
 import styles from "../../styles/Article.module.css";
 import {useRouter} from "next/router";
 
@@ -10,7 +10,7 @@ export const Feed = ({pageNumber, articles}) => {
 
     return(
         <>
-            <Toolbar/>
+            <Navbar/>
              <div className={styles.main}>
                 <div className="mt-6">
                     {articles.map((article,index) => <Article key={index} article={article}/>)}
