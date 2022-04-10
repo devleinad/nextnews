@@ -1,0 +1,45 @@
+.main{
+    width: 600px;
+    height: auto;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.article{
+    width: 600px;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.disabled{
+    cursor: not-allowed;
+}
+
+.enabled{
+    cursor: pointer;
+}
+
+.articleImage{
+    width: 600px;
+}
+
+@media screen and (max-width:567px) {
+    .main{
+        width: 100%;
+        padding: 5px;
+    }
+
+      .articleImage{
+        width: 100% !important;
+    }
+}

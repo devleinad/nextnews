@@ -3,7 +3,13 @@
 @import 'tailwindcss/utilities';
 
 body{
-    background-color: rgb(250, 250, 250);
+    /* background-color: rgb(250, 250, 250); */
     padding: 0;
     margin: 0;
 }
+
+/* .avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+} */
