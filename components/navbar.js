@@ -7,7 +7,7 @@ export const Navbar = () => {
     return(
         <div className={styles.main}>
             <div onClick={() => router.push('/')}>Home</div>
-            <div onClick={() => router.push('/feed/1')}>Feed</div>
+            <div onClick={() => router.push('/feeds/1')}>Feed</div>
             <div>Twitter</div>
             <div>Facebook</div>
             <div>LinkedIn</div>

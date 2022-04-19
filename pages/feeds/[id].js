@@ -48,7 +48,7 @@ export const Feed = ({pageNumber, articles}) => {
     
 }
 
-export const getServerSideProps = async pageContext => {
+export const getServerSideProps = async (pageContext) => {
 
     const pageNumber = pageContext.query.id;
     if(!pageNumber || pageNumber < 1 || pageNumber > 10){
@@ -57,9 +57,10 @@ export const getServerSideProps = async pageContext => {
         }
     }
 
-    const apiRespone = await fetch(`https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=${process.env.NEWS_API_KEY}&pageSize=10&page=${pageNumber}`,);
+    const apiResponse = await fetch(`https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=${process.env.NEWS_API_KEY}&pageSize=10&page=${pageNumber}`,);
 
-    const apiJson = await apiRespone.json();
+    const apiJson = await apiResponse.json();
+
     const {articles} = apiJson;
     return {
         props:{
@@ -67,8 +68,11 @@ export const getServerSideProps = async pageContext => {
             articles
         }
     }
+
    
 }
+
+
 
 
 export const Article = ({article}) => {
