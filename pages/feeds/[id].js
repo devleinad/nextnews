@@ -5,7 +5,6 @@ import styles from "../../styles/Article.module.css";
 import {useRouter} from "next/router";
 
 export const Feed = ({pageNumber, articles}) => {
-        console.log(pageNumber, articles);
         const router = useRouter();
 
     return(
@@ -49,7 +48,7 @@ export const Feed = ({pageNumber, articles}) => {
 }
 
 export const getServerSideProps = async (pageContext) => {
-
+    // console.log(pageContext);
     const pageNumber = pageContext.query.id;
     if(!pageNumber || pageNumber < 1 || pageNumber > 10){
          return {
@@ -79,14 +78,14 @@ export const Article = ({article}) => {
     return (
             <Link href={article.url} passHref>
                 <div className={styles.article}>
-                    <div>
+                    <div className={styles.articleAuthor}>
                         {article.author} - {article.source.name}
                     </div>
-                    <div className="font-medium text-lg text-dark-300">
+                    <div className="font-bold text-lg text-dark-300">
                         {article.title}
                     </div>
 
-                    <div className="font-base text-sm">
+                    <div className="font-base text-md">
                         {article.description}
                     </div>
                     {!!article.urlToImage && (
